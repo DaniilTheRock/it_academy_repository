@@ -22,7 +22,7 @@ public class LoginServlet extends HttpServlet {
         String userAgent = req.getHeader("User-Agent");
 
         if (("qwert".equals(login)) && ("password".equals(password))) {
-            writer.println("Hello Qwert");
+            writer.println("Hello " + login);
 
             HttpSession session = req.getSession();
             session.setAttribute("user", new User(login, password, 0));
